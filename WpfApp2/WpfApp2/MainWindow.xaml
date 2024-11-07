@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Перевірка надійності пароля" Height="350" Width="400">
+    <Grid Margin="10">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- Поле для введення пароля -->
+            <TextBlock Text="Введіть пароль:" Margin="0,0,0,5"/>
+            <PasswordBox x:Name="PasswordBox" Width="200" Margin="0,0,0,5" PasswordChanged="PasswordBox_PasswordChanged"/>
+            <TextBox x:Name="PasswordTextBox" Width="200" Margin="0,0,0,5" Visibility="Collapsed"/>
+
+            <!-- Чекбокс для перегляду пароля -->
+            <CheckBox Content="Показати пароль" Margin="0,0,0,10" Checked="ShowPassword_Checked" Unchecked="ShowPassword_Checked"/>
+
+            <!-- Кнопка для перевірки пароля -->
+            <Button Content="Перевірити пароль" Width="200" Click="OnCheckPasswordClick" Margin="0,0,0,10"/>
+
+            <!-- Поле для виведення результату -->
+            <TextBlock x:Name="ResultTextBlock" Text="" Margin="0,10,0,0" TextWrapping="Wrap" Width="300"/>
+        </StackPanel>
+    </Grid>
+</Window>
